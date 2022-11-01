@@ -1,0 +1,36 @@
+package com.kpn.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.kpn.entity.Course;
+
+@Service
+public class CourseManager 
+{
+	@Autowired
+	CourseRepository CR;
+	
+	//Read data from Database
+	public List<String> getCourse()
+	{
+		List<String> list = new ArrayList<String>();
+		for(Course C : CR.findAll())
+			list.add(toJsonString(C));
+		return list;
+	}
+	
+	
+	//To convert Java Object to JSON string
+	public String toJsonString(Object obj)
+	{
+		GsonBuilder GB = new GsonBuilder();
+		Gson GS = GB.create();
+		return GS.toJson(obj);
+	}
+}

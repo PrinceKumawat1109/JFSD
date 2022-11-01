@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>New Position</title>
+<jsp:include page="navbar2.jsp" />
+
+</head>
+<body>
+	<h2>ADD A NEW POSTION</h2>
+	<h4>Job Details</h4>
+	<p>Some additional info for this screen about validity of the ads, etc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.</p>
+	<h5>Job Title</h5>
+	<input type="text" id="t1"/>
+	<h5>Job Description</h5>
+	<input type="text" id="t2"/>
+	<h5>Job Location</h5>
+	<input type="text" id="t3"/>
+	<h5>Job Type</h5>
+	<input type="text" id="t4"/>
+	<h5>Category</h5>
+	<input type="text" id="t5"/>
+	<h5>Apply(users will apply on your website)</h5>
+	<input type="text" id="t6"/>
+	<h5>Validity of the post</h5>
+	<input type="date" id="t7"/>
+</body>
+</html>

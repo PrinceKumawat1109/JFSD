@@ -1,0 +1,109 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>New Position</title>
+<jsp:include page="navbar2.jsp" />
+
+</head>
+<body>
+<h1 style=" color: red; margin-left: 250px;">ADD A NEW POSITION</h1>
+	<h3 style="margin-left: 50px; margin-top: 50px;">Job Details</h3>
+	<h5 style="margin-left: 50px; margin-top: 20px;">Some additional info for this screen about validity of the ads, etc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.</h5>
+	<h3 style="margin-left: 50px; margin-top: 50px;">Job Title</h3>
+	<input style="margin-left: 50px; margin-top: 20px; height: 25px; width: 250px;" type="text" id="t1"/>
+	
+	
+	<h3 style="margin-left: 50px; margin-top: 50px;">Job Description</h3>
+	<input style="margin-left: 50px; margin-top: 20px; height: 25px; width: 250px;" type="text" id="t2"/>
+	
+	
+	<h3 style="margin-left: 50px; margin-top: 50px;">Job Location</h3>
+	<input style="margin-left: 50px; margin-top: 20px; height: 25px; width: 250px;" type="text" id="t3"/>
+	<h3 style="margin-left: 50px; margin-top: 50px;">Job Type</h3>
+	<input style="margin-left: 50px; margin-top: 20px; height: 25px; width: 250px;" type="text" id="t4"/>
+	<h3 style="margin-left: 50px; margin-top: 50px;">Category</h3>
+	<input style="margin-left: 50px; margin-top: 20px; height: 25px; width: 250px;" type="text" id="t5"/>
+	<h3 style="margin-left: 50px; margin-top: 50px;">Apply(users will apply on your website)</h3>
+	<input style="margin-left: 50px; margin-top: 20px; height: 25px; width: 250px;" type="text" id="t6"/>
+	<h3 style="margin-left: 50px; margin-top: 50px;">Validity of the post)</h3>
+	<input style="margin-left: 50px; margin-top: 20px; height: 25px; width: 250px;" type="date" id="t7"/>
+	<h3 style="margin-left: 50px; margin-top: 50px;">Company name</h3>
+	<input style="margin-left: 50px; margin-top: 20px; height: 25px; width: 250px;" type="text" id="t8"/>
+	<h3 style="margin-left: 50px; margin-top: 50px;">Company Description</h3>
+	<input style="margin-left: 50px; margin-top: 20px; height: 25px; width: 250px;" type="text" id="t9"/>
+	<h3 style="margin-left: 50px; margin-top: 50px;">Website URL</h3>
+	<input style="margin-left: 50px; margin-top: 20px; height: 25px; width: 250px;" type="text" id="t10"/>
+	<h3 style="margin-left: 50px; margin-top: 50px;">COMPANY DETAILS</h3>
+	<button onclick="save1()">Save and Publish</button>
+	</div>
+	<!--<h2>ADD A NEW POSTION</h2>
+	<h4>Job Details</h4>
+	<p>Some additional info for this screen about validity of the ads, etc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.</p>
+	<h5>Job Title</h5>
+	<input type="text" id="t1"/>
+	<h5>Job Description</h5>
+	<input type="text" id="t2"/>
+	<h5>Job Location</h5>
+	<input type="text" id="t3"/>
+	<h5>Job Type</h5>
+	<input type="text" id="t4"/>
+	<h5>Category</h5>
+	<input type="text" id="t5"/>
+	<h5>Apply(users will apply on your website)</h5>
+	<input type="text" id="t6"/>
+	<h5>Validity of the post</h5>
+	<input type="date" id="t7"/>
+	<h5>COMPANY DETAILS</h5>
+	<h6>Company name</h6>
+	<input type="text" id="t8"/>
+	<h6>Company Description</h6>
+	<input type="text" id="t9"/>
+	<h6>Website</h6>
+	<input type="text" id="t10"/>
+	<input type="checkbox" id="t11">
+	<p> I agree with the Terms and conditions.</p>-->
+	<script type="text/javascript">
+function save1()
+{
+	var xhtml = new XMLHttpRequest();
+	var url = "http://localhost:8080/api/new/register/";
+	xhtml.open("POST", url, true);
+	xhtml.setRequestHeader('Content-Type','application/json');
+	
+	var t1 = document.getElementById("t1");
+	var t2 = document.getElementById("t2");
+	var t3 = document.getElementById("t3");
+	var t4 = document.getElementById("t4");
+	var t5 = document.getElementById("t5");
+	var t6 = document.getElementById("t6");
+	var t7 = document.getElementById("t7");
+	var t8 = document.getElementById("t8");
+	var t9 = document.getElementById("t9");
+	var t10 = document.getElementById("t10");
+	
+	xhtml.send(JSON.stringify({
+		jobtitle : t1.value,
+		jobdes : t2.value,
+		loc : t3.value,
+		type : t4.value,
+		category : t5.value,
+		url : t6.value,
+		date : t7.value,
+		comname : t8.value,
+		comdes : t9.value,
+		website : t10.value
+	}));
+	
+	xhtml.onreadystatechange = function()
+	{
+		if(this.readyState == 4 && this.status == 200)
+			lbl.innerText = this.responseText;
+			window.location="http://localhost:8080/employeelogin.jsp";
+	};
+}
+</script>
+</body>
+</html>

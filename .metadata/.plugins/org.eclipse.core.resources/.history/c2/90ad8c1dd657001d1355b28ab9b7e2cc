@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Find A Job</title>
+	<jsp:include page="navbar2.jsp" />
+</head>
+<body>
+<img src="meeting.jpg"/>
+<h2>Find A JOB YOU WILL LOVE.</h2>
+<p>Position
+<input type="text" id="t1"/></p></br>
+<p>Location
+<input type="text" id="t2"/></p>
+<h2>Featured Jobs</h2>
+<h4>TRENDING THIS MONTH</h4>
+</body>
+</html>

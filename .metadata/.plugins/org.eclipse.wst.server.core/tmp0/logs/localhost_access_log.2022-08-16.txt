@@ -1,0 +1,15 @@
+127.0.0.1 - - [16/Aug/2022:07:56:03 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [16/Aug/2022:07:56:04 +0530] "GET /jfsd002/ HTTP/1.1" 200 1153
+0:0:0:0:0:0:0:1 - - [16/Aug/2022:07:56:04 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [16/Aug/2022:07:56:19 +0530] "POST /jfsd002/CalculatorService HTTP/1.1" 200 33
+127.0.0.1 - - [16/Aug/2022:08:16:32 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [16/Aug/2022:08:16:34 +0530] "GET /hibernate-inheritence-type-2/ HTTP/1.1" 200 953
+0:0:0:0:0:0:0:1 - - [16/Aug/2022:08:16:34 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [16/Aug/2022:08:16:50 +0530] "GET /hibernate-inheritence-type-2/AddEmployee?t1=Prince HTTP/1.1" 200 982
+0:0:0:0:0:0:0:1 - - [16/Aug/2022:08:17:07 +0530] "GET /hibernate-inheritence-type-2/AddRegularEmployee?t1=sasi&t2=555555&t3=121212 HTTP/1.1" 200 990
+0:0:0:0:0:0:0:1 - - [16/Aug/2022:08:17:23 +0530] "GET /hibernate-inheritence-type-2/AddContractEmployee?t1=abc&t2=4000&t3=3 HTTP/1.1" 200 991
+127.0.0.1 - - [16/Aug/2022:08:21:36 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [16/Aug/2022:08:21:37 +0530] "GET /hibernate-inheritence-type-3/ HTTP/1.1" 200 953
+0:0:0:0:0:0:0:1 - - [16/Aug/2022:08:21:46 +0530] "GET /hibernate-inheritence-type-3/AddEmployee?t1=gjh HTTP/1.1" 200 982
+0:0:0:0:0:0:0:1 - - [16/Aug/2022:08:22:06 +0530] "GET /hibernate-inheritence-type-3/AddRegularEmployee?t1=vhjv&t2=59561&t3=252 HTTP/1.1" 200 990
+0:0:0:0:0:0:0:1 - - [16/Aug/2022:08:22:15 +0530] "GET /hibernate-inheritence-type-3/AddContractEmployee?t1=kljlibj&t2=5465&t3=2 HTTP/1.1" 200 991

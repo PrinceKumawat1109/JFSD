@@ -1,0 +1,51 @@
+package com.prince.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.prince.entity.EmployerRegister;
+import com.prince.model.EmployerRegisterManager;
+
+
+@RestController
+@RequestMapping("/api")
+public class EmployerRegisterController 
+{
+	@Autowired
+	EmployerRegisterManager erm;
+	
+	@PostMapping("/eregister")
+	public String inserting(@RequestBody EmployerRegister e)
+	{
+		return erm.insertData(e);
+	}
+	
+	@GetMapping("/eregister")
+	public String getData()
+	{
+		return erm.readAll();
+	}
+	@DeleteMapping("/eregister/{email}")
+	public String deleteDatA(@PathVariable("email") String email)
+	{
+		return erm.deleteData(email);
+	}
+	@PutMapping("/eregister/{email}")
+	public String updateParticipants(@RequestBody  EmployerRegister er,@PathVariable("email") String email)
+	{
+		return erm.updateData(er,email);
+	}
+	
+	@PostMapping("/eregister/login/{email}/{password}")
+    public String registerlogin(@PathVariable("email") String email,@PathVariable("password") String password)
+    {
+		return erm.loginData(email,password);
+    }
+}

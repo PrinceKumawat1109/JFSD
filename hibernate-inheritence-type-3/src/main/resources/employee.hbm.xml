@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.model.Employee" table="employee">
+		<id name="id">
+			<generator class="increment"></generator>
+		</id>
+		<property name="name" />
+		<joined-subclass name="com.model.RegularEmployee" table="regular">
+			<key column="id"></key>
+			<property name="salary"></property>
+			<property name="bonus" />
+		</joined-subclass>
+		
+		<joined-subclass name="com.model.ContractEmployee" table="contract">
+			<key column="id"></key>
+			<property name="payperhour"></property>
+			<property name="contractduration" />
+		</joined-subclass>
+	</class>
+</hibernate-mapping>

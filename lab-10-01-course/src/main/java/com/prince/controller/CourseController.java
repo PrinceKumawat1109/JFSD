@@ -1,0 +1,22 @@
+package com.prince.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.prince.model.CourseManager;
+
+@RestController
+@RequestMapping("/api")
+public class CourseController 
+{
+	@Autowired
+	CourseManager CM;
+	
+	@GetMapping("/course")
+	public String course()
+	{
+		return CM.getCourse().toString();
+	}
+}

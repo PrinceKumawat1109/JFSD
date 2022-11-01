@@ -1,0 +1,12 @@
+127.0.0.1 - - [22/Jul/2022:08:09:25 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [22/Jul/2022:08:09:27 +0530] "GET /hibernate-demo/ HTTP/1.1" 200 849
+0:0:0:0:0:0:0:1 - - [22/Jul/2022:08:09:27 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [22/Jul/2022:08:10:03 +0530] "GET /hibernate-demo/ HTTP/1.1" 200 847
+0:0:0:0:0:0:0:1 - - [22/Jul/2022:08:11:44 +0530] "GET /hibernate-demo/ HTTP/1.1" 200 846
+0:0:0:0:0:0:0:1 - - [22/Jul/2022:08:11:55 +0530] "GET /hibernate-demo/ReadStudent HTTP/1.1" 200 450
+0:0:0:0:0:0:0:1 - - [22/Jul/2022:08:12:23 +0530] "GET /hibernate-demo/ HTTP/1.1" 200 846
+0:0:0:0:0:0:0:1 - - [22/Jul/2022:08:12:23 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [22/Jul/2022:08:12:37 +0530] "GET /hibernate-demo/DeleteStudent?t1=31147 HTTP/1.1" 200 875
+0:0:0:0:0:0:0:1 - - [22/Jul/2022:08:12:49 +0530] "GET /hibernate-demo/AddStudent?t1=30850&t2=Ravi HTTP/1.1" 200 875
+0:0:0:0:0:0:0:1 - - [22/Jul/2022:08:12:58 +0530] "GET /hibernate-demo/AddStudent?t1=31089&t2=Virat HTTP/1.1" 200 875
+0:0:0:0:0:0:0:1 - - [22/Jul/2022:08:13:04 +0530] "GET /hibernate-demo/ReadStudent HTTP/1.1" 200 508

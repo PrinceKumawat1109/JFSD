@@ -1,0 +1,34 @@
+package com.prince.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "topics")
+public class Topics 
+{
+	@Id
+	private Long tid;
+	private Long cid;
+	private String tname;
+	
+	public Long getTid() {
+		return tid;
+	}
+	public void setTid(Long tid) {
+		this.tid = tid;
+	}
+	public Long getCid() {
+		return cid;
+	}
+	public void setCid(Long cid) {
+		this.cid = cid;
+	}
+	public String getTname() {
+		return tname;
+	}
+	public void setTname(String tname) {
+		this.tname = tname;
+	}
+}

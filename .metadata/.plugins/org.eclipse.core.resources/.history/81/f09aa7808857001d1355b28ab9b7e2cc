@@ -1,0 +1,23 @@
+package com.prince;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+@Service
+public class newpositionregistermanager {
+	@Autowired
+	newpositionregisterRepository np;
+	
+	public String insertData(newpositionregister e)
+	{
+		np.save(e);
+		return "Inserted Successfully.....!";
+	}
+	public String readAll()
+	{
+	    return toJsonString(np.findAll());
+	}
+}

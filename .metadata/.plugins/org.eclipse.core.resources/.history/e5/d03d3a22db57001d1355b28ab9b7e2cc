@@ -1,0 +1,46 @@
+package com.prince.model;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.prince.entity.newpositionregister;
+import com.prince.repository.newpositionregisterRepository;
+
+@Service
+public class newpositionregistermanager {
+	@Autowired
+	newpositionregisterRepository np;
+	
+	public String insertData(newpositionregister e)
+	{
+		np.save(e);
+		return "Inserted Successfully.....!";
+	}
+	public String readAll()
+	{
+	    return toJsonString(np.findAll());
+	}
+	public String toJsonString(Object obj)
+	{
+		GsonBuilder gb=new GsonBuilder();
+		Gson g=gb.create();
+		return g.toJson(obj);
+	}
+	public String deleteData(String email) 
+	{
+		np.deleteById(email);
+		return "Deleted Success";
+	}
+
+	public String updateData(newpositionregister er2, String user) 
+	{
+		newpositionregister  tmp = np.findById(user).get();
+		tmp.setCom_add(er2.getCom_add());
+		tmp.setCom_name(er2.getCom_name());
+		tmp.setPwd(er2.getPwd());
+		np.save(tmp);
+		return "Data updated successfully...";
+	}
+}

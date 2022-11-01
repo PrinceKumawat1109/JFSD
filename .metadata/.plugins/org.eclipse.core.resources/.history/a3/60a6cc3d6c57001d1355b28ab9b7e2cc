@@ -1,0 +1,38 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Edit Profile</title>
+<style>
+h2{
+text-align : center;
+font-size : 35px;
+}
+.first
+{
+margin-left: 650px;
+margin-top: 50px;
+}
+button
+{
+margin-left:100px;
+margin-top:20px;
+}
+</style>
+</head>
+<body>
+	<jsp:include page="navbar3.jsp" />
+	<h2>Edit Profile</h2>
+	<div class=" first">
+	<p>Firstname : <input type="text" id="t1"/></p>
+	<br/>
+	<p>Lastname : <input type="text" id="t2"/></p>
+	<br/>
+	<p>Gender : <input type="text" id="t3"/></p>
+	<button onclick="update()">Update</button>
+	<label id="lbl"></label>
+	</div>
+</body>
+</html>

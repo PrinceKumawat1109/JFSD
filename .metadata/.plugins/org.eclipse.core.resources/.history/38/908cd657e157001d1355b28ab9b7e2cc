@@ -1,0 +1,50 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Update</title>
+<style>
+.card{
+height: 1500px;
+width: 600px;
+border-style: solid;
+margin-left: 450px;
+}
+.i{
+margin-top: 10px;
+margin-left: 50px;
+}
+</style>
+</head>
+
+<jsp:include page="navbar2.jsp" />
+<body>
+<div class="card">
+	<h1 style=" color: red; margin-left: 100px;">Update Position</h1>
+<h3 style="margin-left: 50px; margin-top: 50px;">Job Description</h3>
+	<input style="margin-left: 50px; margin-top: 20px; height: 25px; width: 250px;" type="text" id="t1"/>
+	<h3 style="margin-left: 50px; margin-top: 50px;">Location</h3>
+	<input style="margin-left: 50px; margin-top: 20px; height: 25px; width: 250px;" type="text" id="t2"/>
+	<h3 style="margin-left: 50px; margin-top: 50px;">Job-Type</h3>
+	<input style="margin-left: 50px; margin-top: 20px; height: 25px; width: 250px;" type="text" id="t3"/>
+	<h3 style="margin-left: 50px; margin-top: 50px;">Category</h3>
+	<input style="margin-left: 50px; margin-top: 20px; height: 25px; width: 250px;" type="text" id="t4"/>
+	<h3 style="margin-left: 50px; margin-top: 50px;">Url</h3>
+	<input style="margin-left: 50px; margin-top: 20px; height: 25px; width: 250px;" type="text" id="t5"/>
+	<h3 style="margin-left: 50px; margin-top: 50px;">Date</h3>
+	<input style="margin-left: 50px; margin-top: 20px; height: 25px; width: 250px;" type="text" id="t6"/>
+	<h3 style="margin-left: 50px; margin-top: 50px;">Company Name</h3>
+	<input style="margin-left: 50px; margin-top: 20px; height: 25px; width: 250px;" type="text" id="t7"/>
+	<h3 style="margin-left: 50px; margin-top: 50px;">Company Description</h3>
+	<input style="margin-left: 50px; margin-top: 20px; height: 25px; width: 250px;" type="text" id="t8"/>
+	<h3 style="margin-left: 50px; margin-top: 50px;">Website Url</h3>
+	<input style="margin-left: 50px; margin-top: 20px; height: 25px; width: 250px;" type="text" id="t9"/>
+	<div class="i">
+	<button style="height: 35px; width: 75px;"  onclick="update()">Update</button>
+	<label id="lbl"></label>
+	</div>
+</div>
+</body>
+</html>

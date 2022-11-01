@@ -1,0 +1,58 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Employee Login</title>
+<style>
+h2{
+text-align : center;
+font-size : 35px;
+}
+.first
+{
+margin-left: 650px;
+margin-top: 50px;
+}
+button
+{
+margin-left:100px;
+margin-top:20px;
+}
+</style>
+</head>
+<jsp:include page="navbar3.jsp" />
+<body>
+<h2> Employee Login</h2>
+<div class=" first">
+	<p>User name : <input type="text" id="t1"/></p>
+	<br/>
+	<p>password : <input type="password" id="t2"/></p>
+	<button onclick="login()">Login</button>
+	<label id="lbl"></label>
+	</div>
+</body>
+<script type="text/javascript">
+function login()
+{
+	var xhtml = new XMLHttpRequest();
+	var t1 = document.getElementById("t1");
+	var t2 = document.getElementById("t2");
+	var url = "http://localhost:8080/api/register/login/"+t1.value+"/"+t2.value;
+	xhtml.open("POST", url, true);
+	xhtml.setRequestHeader('Content-Type','application/json');
+	
+	
+	var lbl = document.getElementById("lbl");
+	
+	xhtml.send();
+	
+	xhtml.onreadystatechange = function()
+	{
+		if(this.readyState == 4 && this.status == 200)
+			lbl.innerText = this.responseText;
+	};
+}
+</script>
+</html>
